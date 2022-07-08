@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script>
+            document.addEventListener('visibilitychange',function(){
+          if (document.visibilityState=="hidden")
+          {
+            alert("Tab swtiched");
+            
+         
+          }
+            });
+
+        </script>
+        <style>
+            a{
+                padding: 10px;
+                background-color: aqua;
+                color: azure;
+                text-decoration: none;
+            }
+        </style>
+        <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+    </head>
+    <body  >
+        <p>asdsadsadsad</p>
+        
+         <video id ="cam" autoplay playinline width="800" height="500"></video>
+         <canvas id="can"></canvas>
+         <a download>SNAP</a>
+         <script>
+        const camera=document.getElementById("cam");
+        const canvas=document.getElementById("can");
+        const webca=new Webcam(camera,"user",canvas);
+        webca.start();
+         </script>
+    </body>
+</html>
